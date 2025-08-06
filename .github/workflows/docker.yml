@@ -1,4 +1,3 @@
-# .github/workflows/release.yml (개별 프로젝트)
 name: Release on Tag
 
 on:
@@ -8,7 +7,7 @@ on:
 
 jobs:
   call-build-workflow:
-    uses: mandacode-com/workflows/build-docker.yml@v0.1.0
+    uses: mandacode-com/workflows/.github/workflows/build-docker.yml@v0.1.1-dev.0
     with:
       app_name: ${{ vars.APP_NAME }}
       docker_registry: ${{ vars.DOCKER_REGISTRY }}
