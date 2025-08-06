@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-build-workflow:
-    uses: mandacode-com/workflows/.github/workflows/build-docker.yml@v0.1.0
+    uses: mandacode-com/workflows/build-docker.yml@v0.1.0
     with:
       app_name: ${{ vars.APP_NAME }}
       docker_registry: ${{ vars.DOCKER_REGISTRY }}
