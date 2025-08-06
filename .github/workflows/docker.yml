@@ -10,9 +10,9 @@ jobs:
   call-build-workflow:
     uses: mandacode-com/workflows/.github/workflows/build-docker.yml@v0.1.0
     with:
-      app_name: ${{ env.APP_NAME }}
-      docker_registry: ${{ env.DOCKER_REGISTRY }}
-      docker_repository: ${{ env.DOCKER_REPOSITORY }}
+      app_name: ${{ vars.APP_NAME }}
+      docker_registry: ${{ vars.DOCKER_REGISTRY }}
+      docker_repository: ${{ vars.DOCKER_REPOSITORY }}
     secrets:
       registry_username: ${{ secrets.REGISTRY_USERNAME }}
       registry_password: ${{ secrets.REGISTRY_PASSWORD }}
